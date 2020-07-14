@@ -1,0 +1,22 @@
+.message {
+    width: 40%;
+    margin: 0px 10px 0px 10px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.content-area {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+}
+
+.username-area {
+    margin: 0px 5px 0px 5px;
+    font-size: 11px;
+}
+
+.time-area {
+    font-size: 11px;
+    color: rgb(107, 106, 106);
+}

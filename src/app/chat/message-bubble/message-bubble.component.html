@@ -1,0 +1,13 @@
+<div class="message" [style.float]="cssFloat">
+    <div class="username-area" [style.color]="message.user.color">
+        {{ messageUsername }}
+    </div>
+    <div class="content-area" [style.backgroundColor]="cssBgColor">
+        <div class="message-text">
+            {{ message.content }}
+        </div>
+        <div class="time-area">
+            {{ message.timestamp }}
+        </div>
+    </div>
+</div>

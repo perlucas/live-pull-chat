@@ -1,0 +1,61 @@
+.chat-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 15px 0px;
+    background-color: #2d2b4e;
+}
+
+.header nav {
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.chat-area {
+    padding: 20px 0px 20px 0px;
+    background-color: white;
+    flex-grow: 9;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.writting-area {
+    flex-grow: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.writting-area textarea {
+    height: 100%;
+    flex-grow: 6;
+    outline: none;
+    resize: none;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 0;
+    background-color: rgb(240, 240, 240);
+    font-family: 'Cairo', sans-serif;
+}
+
+.writting-area button {
+    flex-grow: 1;
+    background-color: #cc7c8a;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.writting-area button:not([disabled]):hover {
+    background-color: #b96e7b;
+}
+
+.writting-area button:not([disabled]):active {
+    background-color: #a5636e;
+}

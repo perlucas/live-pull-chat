@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+/* palette: https://www.color-hex.com/color-palette/94785 */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #2d2b4e;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.card {
+    box-shadow: 5px 5px 3px;
+}
+
+.card-header h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+button.btn {
+    border-radius: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button.btn[disabled] {
+    opacity: 0.8;
+    cursor: auto;
+}

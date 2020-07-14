@@ -1,0 +1,17 @@
+span.error {
+    color: rgb(214, 14, 14);
+    width: 100%;
+    text-align: center;
+}
+
+a.error-link {
+    color: inherit;
+}
+
+a.error-link:hover {
+    text-decoration: none;
+}
+
+:host {
+    margin-bottom: 10px;
+}

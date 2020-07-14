@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="chat-container card">
+        <div class="card-header">
+            <h2 *ngIf="authenticating; else alternativeMessage">Intentando autenticar<app-dots></app-dots></h2>
+            <ng-template #alternativeMessage>
+                <h2>Configuración inicial</h2>
+            </ng-template>
+        </div>
+        <div class="card-body">
+            <form *ngIf="! authenticating" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="form-row">
+                    <login-error></login-error>
+                </div>
+                <div class="form-row">
+                    <label for="nickInput">Usuario:</label>
+                    <input id="nickInput" type="text" class="nick-input" name="nickname" ngModel>
+                </div>
+                <div class="form-row">
+                    <label for="colorInput">Color:</label>
+                    <select id="colorInput" name="color" [(ngModel)]="getDefaultSelectedColor">
+                        <option 
+                            *ngFor="let color of getColorsToSelect()" 
+                            [ngValue]="color.color"
+                        >
+                            {{ color.name }}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <button class="btn" type="submit">INGRESAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,27 +1,16 @@
-# PullChat
+# Live Pull Chat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
-## Development server
+Live Chat using "Pull" mechanism. User messages are requested on a frequency of 2 seconds between each request.
+
+Different users and messages repositories have been created for increasing the backend storage performance by optimizing memory usage. This is done by using file storage instead of memory and chunks based mechanisms.
+
+## Angular development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## NodeJS backend server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run server` for the backend server (which holds the API). It uses `nodemon` for reloading the server after a change has been made.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

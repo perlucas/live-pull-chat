@@ -1,0 +1,16 @@
+<ng-container [ngSwitch]="auth.errorCode">
+
+    <span class="error" *ngSwitchCase="errorCodes.InvalidUsernameError">
+        El username es inválido, vea los <a class="error-link" href="" (click)="onShowUsernameHelp($event)">requisitos</a>
+    </span>
+
+    <span class="error" *ngSwitchCase="errorCodes.RepeatedUsernameError">
+        El nickname que intenta utilizar está siendo usado por otra persona
+    </span>
+    
+    <span class="error" *ngSwitchCase="errorCodes.AbsentSessionError"></span>
+    <!-- <span class="error" *ngSwitchCase="0"></span> -->
+
+    <span *ngSwitchDefault>Error desconocido! {{ auth.errorCode }}</span>
+
+</ng-container>

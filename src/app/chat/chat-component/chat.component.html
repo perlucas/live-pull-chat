@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="chat-container">
+        <div class="header">
+            <nav>
+                <span>Live Pull Chat - Lucas Pereyra</span>
+            </nav>
+        </div>
+
+        <div class="chat-area">
+            <message-bubble *ngFor="let m of messages; trackBy: trackByMessageId" [message]="m"></message-bubble>
+        </div>
+
+        <div class="writting-area">
+            <textarea 
+                [(ngModel)] = "messageContent"
+                placeholder="Escribir un mensaje..." 
+                (keydown.enter)="sendMessage($event)"
+                (focus)="onTextAreaFocus()"
+            ></textarea>
+            <button 
+                type="button" 
+                class="btn" 
+                [disabled]="messageContent.trim().length === 0"
+                (click)="sendMessage($event)"    
+            >Enviar</button>
+        </div>
+    </div>
+</div>
